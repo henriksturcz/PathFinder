@@ -171,16 +171,16 @@ int main() {
                 cell.setOutlineThickness(1);
                 cell.setFillColor(grid[y][x] == 1 ? sf::Color::Red : sf::Color::White);
                 if (grid[y][x] == 1)
-                    cell.setFillColor(sf::Color(80, 80, 80)); // Dark Gray for obstacles
+                    cell.setFillColor(sf::Color(80, 80, 80));
                 else
-                    cell.setFillColor(sf::Color(220, 220, 220,180)); // Light Gray for normal cells
+                    cell.setFillColor(sf::Color(220, 220, 220,180));
 
                 if (sf::Vector2i(x, y) == startPos)
-                    cell.setFillColor(sf::Color(100, 200, 255, 80)); // Bright Green for start position
+                    cell.setFillColor(sf::Color(100, 200, 255, 80));
                 if (sf::Vector2i(x, y) == endPos)
-                    cell.setFillColor(sf::Color(130, 230, 255, 150)); // Bright Red for end position
+                    cell.setFillColor(sf::Color(130, 230, 255, 150));
                 if (std::find(path.begin(), path.end(), sf::Vector2i(x, y)) != path.end())
-                    cell.setFillColor(sf::Color(100, 200, 255, 180)); // Semi-transparent Light Blue for path
+                    cell.setFillColor(sf::Color(100, 200, 255, 180));
 
                 window.draw(cell);
             }
